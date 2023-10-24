@@ -12,7 +12,7 @@
         <!--Ubicación-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapasRouting" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MapasRouting" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -57,16 +57,21 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="JcM-7x-aOw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rI2-Vl-Xs1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="qLY-Iy-rE9" kind="relationship" relationship="viewControllers" id="3a7-Su-vTE"/>
+                        <segue destination="IjS-ip-NTo" kind="relationship" relationship="viewControllers" id="PwL-bG-RyK"/>
+                        <segue destination="xLq-2S-iix" kind="relationship" relationship="viewControllers" id="qWL-aa-sQv"/>
+                        <segue destination="Df3-o0-jYE" kind="relationship" relationship="viewControllers" id="nKI-bs-oYW"/>
+                        <segue destination="p20-eY-8I0" kind="relationship" relationship="viewControllers" id="gEB-U7-20n"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JGe-R7-h8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-22.137404580152669" y="-27.464788732394368"/>
+            <point key="canvasLocation" x="-378" y="1377"/>
         </scene>
         <!--Ubicación-->
         <scene sceneID="kzo-gS-Kfc">
@@ -87,10 +92,241 @@
             </objects>
             <point key="canvasLocation" x="904.58015267175574" y="-27.464788732394368"/>
         </scene>
+        <!--Conocenos-->
+        <scene sceneID="Wwl-BS-bXF">
+            <objects>
+                <viewController id="cFi-9R-EKX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f0K-Ds-qag">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="travel-journey-trip" translatesAutoresizingMaskIntoConstraints="NO" id="4ev-aB-b2I">
+                                <rect key="frame" x="0.0" y="128" width="393" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="JQ9-Z7-0GC"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZA8-1S-uaL">
+                                <rect key="frame" x="10" y="393" width="373" height="361"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8oa-ZX-J9F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8oa-ZX-J9F" firstAttribute="trailing" secondItem="ZA8-1S-uaL" secondAttribute="trailing" constant="10" id="DUp-Id-k0j"/>
+                            <constraint firstItem="ZA8-1S-uaL" firstAttribute="top" secondItem="4ev-aB-b2I" secondAttribute="bottom" constant="15" id="DeM-ux-Kgg"/>
+                            <constraint firstItem="8oa-ZX-J9F" firstAttribute="bottom" secondItem="ZA8-1S-uaL" secondAttribute="bottom" constant="15" id="UAe-S9-hK1"/>
+                            <constraint firstItem="4ev-aB-b2I" firstAttribute="top" secondItem="8oa-ZX-J9F" secondAttribute="top" constant="25" id="dVk-UX-gYK"/>
+                            <constraint firstItem="8oa-ZX-J9F" firstAttribute="trailing" secondItem="4ev-aB-b2I" secondAttribute="trailing" id="ozP-hL-HD4"/>
+                            <constraint firstItem="4ev-aB-b2I" firstAttribute="leading" secondItem="8oa-ZX-J9F" secondAttribute="leading" id="tLV-wj-h5V"/>
+                            <constraint firstItem="ZA8-1S-uaL" firstAttribute="leading" secondItem="8oa-ZX-J9F" secondAttribute="leading" constant="10" id="yVT-35-xA9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Conocenos" id="fjJ-E4-QDA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="square.and.arrow.up" catalog="system" id="rgE-Yk-uAf">
+                            <connections>
+                                <segue destination="rAX-i2-Zkn" kind="show" id="Vbq-fO-6eh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fho-4z-6jx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1831.2977099236641" y="656.33802816901414"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uXv-TT-yOO">
+            <objects>
+                <viewController id="rAX-i2-Zkn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="180-xb-FZm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="trip" translatesAutoresizingMaskIntoConstraints="NO" id="w8o-u6-jeP">
+                                <rect key="frame" x="19" y="325" width="355" height="202"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Tae-8z-e6c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="HG0-Ub-4t7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G2r-LV-OR7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2756.4885496183206" y="655.63380281690149"/>
+        </scene>
+        <!--Contacto-->
+        <scene sceneID="UFe-1h-KVH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IjS-ip-NTo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contacto" image="person.crop.circle.fill" catalog="system" id="YMf-NX-2Cv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jc7-0L-lo4">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cFi-9R-EKX" kind="relationship" relationship="rootViewController" id="8XY-KE-IPj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2o3-2u-eJn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.58015267175574" y="656.33802816901414"/>
+        </scene>
+        <!--Dirección-->
+        <scene sceneID="hQS-jv-BHz">
+            <objects>
+                <viewController id="xLq-2S-iix" customClass="BusquedaDireccionViewController" customModule="MapasRouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dYT-mm-NKl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MrA-fa-1Wx">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="393" id="Pe8-by-27s"/>
+                                </constraints>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dirección a buscar..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3YM-nQ-x14">
+                                <rect key="frame" x="15" y="69" width="363" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="L8k-fg-tRa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1JZ-6c-eTG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MrA-fa-1Wx" firstAttribute="leading" secondItem="1JZ-6c-eTG" secondAttribute="leading" id="3d7-Xf-BWb"/>
+                            <constraint firstItem="3YM-nQ-x14" firstAttribute="leading" secondItem="1JZ-6c-eTG" secondAttribute="leading" constant="15" id="E5i-OF-Pyq"/>
+                            <constraint firstItem="MrA-fa-1Wx" firstAttribute="trailing" secondItem="1JZ-6c-eTG" secondAttribute="trailing" id="Oda-HH-ZnJ"/>
+                            <constraint firstItem="3YM-nQ-x14" firstAttribute="top" secondItem="1JZ-6c-eTG" secondAttribute="top" constant="10" id="YNV-mj-ttG"/>
+                            <constraint firstItem="MrA-fa-1Wx" firstAttribute="top" secondItem="dYT-mm-NKl" secondAttribute="top" id="cfz-bg-W2v"/>
+                            <constraint firstItem="1JZ-6c-eTG" firstAttribute="trailing" secondItem="3YM-nQ-x14" secondAttribute="trailing" constant="15" id="lAr-Ow-P6H"/>
+                            <constraint firstAttribute="bottom" secondItem="MrA-fa-1Wx" secondAttribute="bottom" id="mgv-RI-NJe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Dirección" image="map.fill" catalog="system" id="DId-vP-qT3"/>
+                    <connections>
+                        <outlet property="map" destination="MrA-fa-1Wx" id="aSH-Dc-X0w"/>
+                        <outlet property="mapa" destination="MrA-fa-1Wx" id="bf2-Qu-kJi"/>
+                        <outlet property="txtDireccionABuscar" destination="3YM-nQ-x14" id="mdf-rk-nzh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uvf-o8-nqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.58015267175574" y="1376.7605633802818"/>
+        </scene>
+        <!--Ruta-->
+        <scene sceneID="q8Z-Qg-fmj">
+            <objects>
+                <viewController id="Df3-o0-jYE" customClass="RutaViewController" customModule="MapasRouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tJJ-Hq-2UQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yBZ-i1-BPQ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="A dónde quieres viajar" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VrU-9A-KAS">
+                                <rect key="frame" x="15" y="74" width="363" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8Mx-FV-aCb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="route"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8MG-IW-X5w"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yBZ-i1-BPQ" firstAttribute="bottom" secondItem="8MG-IW-X5w" secondAttribute="bottom" id="6WQ-nM-fEq"/>
+                            <constraint firstItem="VrU-9A-KAS" firstAttribute="top" secondItem="8MG-IW-X5w" secondAttribute="top" constant="15" id="BEL-UT-Atk"/>
+                            <constraint firstItem="8MG-IW-X5w" firstAttribute="trailing" secondItem="VrU-9A-KAS" secondAttribute="trailing" constant="15" id="i1f-dF-xaX"/>
+                            <constraint firstItem="yBZ-i1-BPQ" firstAttribute="trailing" secondItem="8MG-IW-X5w" secondAttribute="trailing" id="oPB-h0-wm3"/>
+                            <constraint firstItem="yBZ-i1-BPQ" firstAttribute="top" secondItem="tJJ-Hq-2UQ" secondAttribute="top" id="uOP-64-k7g"/>
+                            <constraint firstItem="VrU-9A-KAS" firstAttribute="leading" secondItem="8MG-IW-X5w" secondAttribute="leading" constant="15" id="wap-34-b2V"/>
+                            <constraint firstItem="yBZ-i1-BPQ" firstAttribute="leading" secondItem="8MG-IW-X5w" secondAttribute="leading" id="znh-2g-xnT"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ruta" image="arrowshape.turn.up.right" catalog="system" id="pfO-qQ-tjr"/>
+                    <connections>
+                        <outlet property="map" destination="yBZ-i1-BPQ" id="6Dm-Tt-cER"/>
+                        <outlet property="txtLugarDestino" destination="VrU-9A-KAS" id="G1l-EH-inh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PF1-4W-0Mf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.58015267175574" y="2107.7464788732395"/>
+        </scene>
+        <!--Cercanos-->
+        <scene sceneID="x9v-6h-znH">
+            <objects>
+                <viewController id="p20-eY-8I0" customClass="LugaresCercanosViewController" customModule="MapasRouting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CHp-ZS-Fcc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6E1-Oh-gpZ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Buscar lugares cercanos" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XE9-zl-pTK">
+                                <rect key="frame" x="15" y="74" width="363" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="EWY-9L-UfS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uPk-3G-6Df"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XE9-zl-pTK" firstAttribute="top" secondItem="uPk-3G-6Df" secondAttribute="top" constant="15" id="BlG-rR-fT0"/>
+                            <constraint firstItem="uPk-3G-6Df" firstAttribute="trailing" secondItem="XE9-zl-pTK" secondAttribute="trailing" constant="15" id="MrD-lw-EyI"/>
+                            <constraint firstItem="6E1-Oh-gpZ" firstAttribute="trailing" secondItem="uPk-3G-6Df" secondAttribute="trailing" id="fOW-Wk-wgN"/>
+                            <constraint firstItem="6E1-Oh-gpZ" firstAttribute="top" secondItem="CHp-ZS-Fcc" secondAttribute="top" id="jBb-f2-D11"/>
+                            <constraint firstAttribute="bottom" secondItem="6E1-Oh-gpZ" secondAttribute="bottom" id="kbc-wL-V4X"/>
+                            <constraint firstItem="6E1-Oh-gpZ" firstAttribute="leading" secondItem="uPk-3G-6Df" secondAttribute="leading" id="tYK-pd-bl5"/>
+                            <constraint firstItem="XE9-zl-pTK" firstAttribute="leading" secondItem="uPk-3G-6Df" secondAttribute="leading" constant="15" id="v6p-oF-zfn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Cercanos" image="sportscourt.circle" catalog="system" id="xcA-JY-HJ9"/>
+                    <connections>
+                        <outlet property="map" destination="6E1-Oh-gpZ" id="lO8-J1-JJX"/>
+                        <outlet property="txtSearch" destination="XE9-zl-pTK" id="SwM-kT-Jk8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DCe-OU-VhZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904.58015267175574" y="2867.605633802817"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.right" catalog="system" width="128" height="104"/>
         <image name="location.fill" catalog="system" width="128" height="119"/>
+        <image name="map.fill" catalog="system" width="128" height="110"/>
         <image name="mappin.and.ellipse" catalog="system" width="117" height="128"/>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="sportscourt.circle" catalog="system" width="128" height="123"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="travel-journey-trip" width="1280" height="724"/>
+        <image name="trip" width="1600" height="1066"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

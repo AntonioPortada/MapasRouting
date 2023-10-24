@@ -9,7 +9,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     // MARK: - IBOulet
     @IBOutlet weak var mapa: MKMapView!
@@ -37,6 +37,14 @@ class ViewController: UIViewController {
     
     @IBAction func btnZoom(_ sender: Any) {
         
+        guard let lat, let long else { return }
+        let ubicationMap = CLLocationCoordinate2D(latitude: lat, longitude: long)
+        
+        let spanMap = MKCoordinateSpan(latitudeDelta: 0.15, longitudeDelta: 0.15)
+        let regionMap = MKCoordinateRegion(center: ubicationMap, span: spanMap)
+        
+        mapa.setRegion(regionMap, animated: true)
+        mapa.showsUserLocation = true
     }
     
     // MARK: - local methods
@@ -54,7 +62,7 @@ class ViewController: UIViewController {
 }
 
 // MARK: - CLLocationManagerDelegate
-extension ViewController: CLLocationManagerDelegate {
+extension MainViewController: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
